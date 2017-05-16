@@ -8,8 +8,7 @@ It is also intended to be a layer of decoupling between:
 
 1. the actual code the represent the DomainModel of a project and
 
-2. tools like code generators that can automate tasks based on the
- DomainModel
+2. tools like code generators that can automate tasks based on the DomainModel
 
  
 # Use-Cases
