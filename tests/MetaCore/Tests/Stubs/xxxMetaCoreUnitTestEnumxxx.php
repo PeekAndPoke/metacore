@@ -9,7 +9,7 @@ declare(strict_types=1);
 
 namespace PeekAndPoke\Component\MetaCore\Tests\Stubs;
 
-use PeekAndPoke\Horizons\Type\Enumerated;
+use PeekAndPoke\Types\Enumerated;
 
 
 /**

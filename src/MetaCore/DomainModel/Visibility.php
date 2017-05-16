@@ -5,7 +5,7 @@
 
 namespace PeekAndPoke\Component\MetaCore\DomainModel;
 
-use PeekAndPoke\Horizons\Type\Enumerated;
+use PeekAndPoke\Types\Enumerated;
 
 
 /**

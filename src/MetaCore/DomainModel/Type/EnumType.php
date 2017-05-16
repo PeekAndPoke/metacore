@@ -7,7 +7,7 @@ namespace PeekAndPoke\Component\MetaCore\DomainModel\Type;
 
 use PeekAndPoke\Component\MetaCore\DomainModel\Type;
 use PeekAndPoke\Component\Slumber\Annotation\Slumber;
-use PeekAndPoke\Horizons\Type\Enumerated;
+use PeekAndPoke\Types\Enumerated;
 
 /**
  * @author Karsten J. Gerber <kontakt@karsten-gerber.de>
@@ -44,7 +44,7 @@ class EnumType extends Type
         $this->values = $enum::enumerateValues();
     }
 
-    public static function type() : string
+    public static function type(): string
     {
         return self::TYPE;
     }
@@ -52,7 +52,7 @@ class EnumType extends Type
     /**
      * @return string
      */
-    public function getId() : string
+    public function getId(): string
     {
         return $this->id;
     }
@@ -60,7 +60,7 @@ class EnumType extends Type
     /**
      * @return \string[]
      */
-    public function getValues() : array
+    public function getValues(): array
     {
         return $this->values;
     }

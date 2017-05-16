@@ -18,7 +18,7 @@ use PeekAndPoke\Component\MetaCore\DomainModel\TypeRegistry;
 use PeekAndPoke\Component\MetaCore\Exception\MetaCoreRuntimeException;
 use PeekAndPoke\Component\Psi\Psi;
 use PeekAndPoke\Component\Slumber\Annotation\Slumber\Alias;
-use PeekAndPoke\Horizons\Type\Enumerated;
+use PeekAndPoke\Types\Enumerated;
 use phpDocumentor\Reflection\DocBlockFactory;
 use phpDocumentor\Reflection\Types;
 
@@ -51,13 +51,15 @@ class Builder
     {
         static $autoloaderRegistered = false;
 
-        if (! $autoloaderRegistered) {
+        if (!$autoloaderRegistered) {
             $autoloaderRegistered = true;
 
             /** @noinspection ExceptionsAnnotatingAndHandlingInspection */
-            AnnotationRegistry::registerLoader(function ($class) {
-                return class_exists($class) || interface_exists($class) || trait_exists($class);
-            });
+            AnnotationRegistry::registerLoader(
+                function ($class) {
+                    return class_exists($class) || interface_exists($class) || trait_exists($class);
+                }
+            );
         }
 
         return new static(
@@ -84,14 +86,14 @@ class Builder
         $this->docBlockFactory = DocBlockFactory::createInstance();
 
         $this->builtInTypes = [
-            DomainModel\Type\AnyType::TYPE           => new DomainModel\Type\AnyType(),
-            DomainModel\Type\BooleanType::TYPE       => new DomainModel\Type\BooleanType(),
-            DomainModel\Type\DateTimeType::TYPE      => new DomainModel\Type\DateTimeType(),
-            DomainModel\Type\DoubleType::TYPE        => new DomainModel\Type\DoubleType(),
-            DomainModel\Type\FloatType::TYPE         => new DomainModel\Type\FloatType(),
-            DomainModel\Type\IntType::TYPE           => new DomainModel\Type\IntType(),
+            DomainModel\Type\AnyType::TYPE => new DomainModel\Type\AnyType(),
+            DomainModel\Type\BooleanType::TYPE => new DomainModel\Type\BooleanType(),
+            DomainModel\Type\DateTimeType::TYPE => new DomainModel\Type\DateTimeType(),
+            DomainModel\Type\DoubleType::TYPE => new DomainModel\Type\DoubleType(),
+            DomainModel\Type\FloatType::TYPE => new DomainModel\Type\FloatType(),
+            DomainModel\Type\IntType::TYPE => new DomainModel\Type\IntType(),
             DomainModel\Type\LocalDateTimeType::TYPE => new DomainModel\Type\LocalDateTimeType(),
-            DomainModel\Type\StringType::TYPE        => new DomainModel\Type\StringType(),
+            DomainModel\Type\StringType::TYPE => new DomainModel\Type\StringType(),
         ];
     }
 
@@ -122,7 +124,7 @@ class Builder
     /**
      * @return Type[]
      */
-    public function getBuiltInTypes() : array
+    public function getBuiltInTypes(): array
     {
         return $this->builtInTypes;
     }
@@ -138,7 +140,7 @@ class Builder
      *
      * @return string
      */
-    public function buildFullName(TypeRef $ref) : string
+    public function buildFullName(TypeRef $ref): string
     {
         if (count($ref->getParams()) === 0) {
             return $ref->getId();
