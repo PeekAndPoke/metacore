@@ -13,9 +13,14 @@ script:
   - vendor/bin/phpunit
 
 after_success:
+  # coveralls
   - wget https://github.com/satooshi/php-coveralls/releases/download/v1.0.0/coveralls.phar
   - chmod +x coveralls.phar
   - travis_retry php coveralls.phar -v
+
+  # scrutinizer
+  - wget https://scrutinizer-ci.com/ocular.phar
+  - php ocular.phar code-coverage:upload --format=php-clover build/logs/clover.xml
 
 notifications:
   email:
