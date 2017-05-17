@@ -1,3 +1,6 @@
+[![Coverage Status](https://coveralls.io/repos/github/PeekAndPoke/metacore/badge.svg?branch=master)](https://coveralls.io/github/PeekAndPoke/metacore?branch=master)
+
+
 # What is the MetaCore?
 
 The MetaCore is a way to represent objects exiting in your code base.
