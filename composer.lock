@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "42312cd26d5313f115c91657fac2b842",
+    "content-hash": "7710d37f1265b68a8023c31aee9ba39d",
     "packages": [
         {
             "name": "doctrine/annotations",
@@ -535,12 +535,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/PeekAndPoke/slumber.git",
-                "reference": "f67258f61b2f4d2fa784ec1d5642f3225bdf850f"
+                "reference": "dfb7c29e69ec60805f7cbf8e2062af1983c63476"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/PeekAndPoke/slumber/zipball/f67258f61b2f4d2fa784ec1d5642f3225bdf850f",
-                "reference": "f67258f61b2f4d2fa784ec1d5642f3225bdf850f",
+                "url": "https://api.github.com/repos/PeekAndPoke/slumber/zipball/dfb7c29e69ec60805f7cbf8e2062af1983c63476",
+                "reference": "dfb7c29e69ec60805f7cbf8e2062af1983c63476",
                 "shasum": ""
             },
             "require": {
@@ -574,7 +574,7 @@
                 }
             ],
             "description": "Serialization through Annotations",
-            "time": "2017-05-16 06:22:15"
+            "time": "2017-05-17 04:27:03"
         },
         {
             "name": "psr/container",
@@ -2495,6 +2495,8 @@
     },
     "prefer-stable": false,
     "prefer-lowest": false,
-    "platform": [],
+    "platform": {
+        "php": "^7.1"
+    },
     "platform-dev": []
 }
