@@ -18,6 +18,9 @@ after_success:
   - chmod +x coveralls.phar
   - travis_retry php coveralls.phar -v
 
+  # bug work around for guzzle before 6.2.3 (https://github.com/guzzle/guzzle/issues/568)
+  - rm /tmp/guzzle-cacert.pem
+
   # scrutinizer
   - wget https://scrutinizer-ci.com/ocular.phar
   - travis_retry php ocular.phar code-coverage:upload --format=php-clover build/logs/clover.xml
