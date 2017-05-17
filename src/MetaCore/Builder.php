@@ -41,7 +41,7 @@ class Builder
     private $typeRegistry;
     /** @var DocBlockFactory */
     private $docBlockFactory;
-    /** @var Type[] Built in type, key being the type name, value a blueprint instance */
+    /** @var array|Type[] Built in type, key being the type name, value a blueprint instance */
     private $builtInTypes;
 
     /**
