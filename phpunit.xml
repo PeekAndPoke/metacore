@@ -10,17 +10,11 @@
     <testsuites>
 
         <testsuite name="unit">
-            <directory suffix="Test.php">tests/*/Tests/Unit</directory>
-            <directory suffix="Test.php">tests/*/*/Tests/Unit</directory>
-            <directory suffix="Test.php">tests/*/*/*/Tests/Unit</directory>
-            <directory suffix="Test.php">tests/*/*/*/*/Tests/Unit</directory>
+            <directory suffix="Test.php">tests/Unit</directory>
         </testsuite>
 
         <testsuite name="functional">
-            <directory suffix="Test.php">tests/*/Tests/Functional</directory>
-            <directory suffix="Test.php">tests/*/*/Tests/Functional</directory>
-            <directory suffix="Test.php">tests/*/*/*/Tests/Functional</directory>
-            <directory suffix="Test.php">tests/*/*/*/*/Tests/Functional</directory>
+            <directory suffix="Test.php">tests/Functional</directory>
         </testsuite>
 
     </testsuites>
@@ -28,17 +22,6 @@
     <filter>
         <whitelist addUncoveredFilesFromWhitelist="true">
             <directory suffix=".php">src/</directory>
-
-            <exclude>
-                <directory suffix=".php">tests/*/Tests</directory>
-                <directory suffix=".php">tests/*/*/Tests</directory>
-                <directory suffix=".php">tests/*/*/*/Tests</directory>
-                <directory suffix=".php">tests/*/*/*/*/Tests</directory>
-                <directory suffix=".php">tests/*/*/*/*/*/Tests</directory>
-                <directory suffix=".php">tests/*/*/*/*/*/*/Tests</directory>
-                <directory suffix=".php">tests/*/*/*/*/*/*/*/Tests</directory>
-                <directory suffix=".php">tests/*/*/*/*/*/*/*/*/Tests</directory>
-            </exclude>
         </whitelist>
     </filter>
 

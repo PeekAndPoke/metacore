@@ -23,12 +23,12 @@
     },
     "autoload": {
         "psr-4": {
-            "PeekAndPoke\\Component\\MetaCore\\": "src/MetaCore"
+            "PeekAndPoke\\Component\\MetaCore\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "PeekAndPoke\\Component\\MetaCore\\": "tests/MetaCore"
+            "PeekAndPoke\\Component\\MetaCore\\": "tests"
         }
     }
 }

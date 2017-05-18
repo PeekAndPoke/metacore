@@ -1,5 +1,6 @@
 [![Build Status](https://travis-ci.org/PeekAndPoke/metacore.svg?branch=master)](https://www.travis-ci.org/PeekAndPoke/metacore)
 [![Coverage Status](https://coveralls.io/repos/github/PeekAndPoke/metacore/badge.svg?branch=master)](https://coveralls.io/github/PeekAndPoke/metacore?branch=master)
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/PeekAndPoke/metacore/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/PeekAndPoke/metacore/?branch=master)
 [![Dependency Status](https://gemnasium.com/badges/github.com/PeekAndPoke/metacore.svg)](https://gemnasium.com/github.com/PeekAndPoke/metacore)
 
 
