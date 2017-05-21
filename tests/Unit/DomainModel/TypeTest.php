@@ -5,7 +5,6 @@
  * Date: 10.05.17
  * Time: 09:22
  */
-declare(strict_types=1);
 
 namespace PeekAndPoke\Component\MetaCore\Unit\DomainModel;
 
@@ -63,7 +62,7 @@ class TypeTest extends TestCase
 
         $this->assertSame(
             $subjectCls,
-                $announcedClass,
+            $announcedClass,
             'The Slumber\Polymorphic annotation must announce ' . $subjectType . ' as ' . $subjectCls . ' but said ' . $announcedClass
         );
     }

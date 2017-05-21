@@ -5,7 +5,6 @@
  * Date: 11.05.17
  * Time: 17:30
  */
-declare(strict_types=1);
 
 namespace PeekAndPoke\Component\MetaCore\Unit\DomainModel;
 

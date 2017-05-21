@@ -5,7 +5,6 @@
  * Date: 10.05.17
  * Time: 07:33
  */
-declare(strict_types=1);
 
 namespace PeekAndPoke\Component\MetaCore\Unit\DomainModel\Type;
 
@@ -39,7 +38,7 @@ class MapTypeTest extends TestCase
         $itemType = Type::any()->ref();
         $subject  = new MapType($keyType, $itemType);
 
-        $this->assertSame($keyType,  $subject->getKeyTypeRef(), 'The key type must be set correctly');
+        $this->assertSame($keyType, $subject->getKeyTypeRef(), 'The key type must be set correctly');
         $this->assertSame($itemType, $subject->getValueTypeRef(), 'The value type must be set correctly');
     }
 

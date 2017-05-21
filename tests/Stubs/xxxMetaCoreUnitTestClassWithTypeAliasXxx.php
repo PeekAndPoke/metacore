@@ -5,7 +5,6 @@
  * Date: 11.05.17
  * Time: 07:20
  */
-declare(strict_types=1);
 
 namespace PeekAndPoke\Component\MetaCore\Stubs;
 
