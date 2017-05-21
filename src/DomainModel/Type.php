@@ -52,7 +52,7 @@ abstract class Type
     /**
      * @return Type\AnyType
      */
-    public static function any(): Type\AnyType
+    public static function any()
     {
         return new Type\AnyType();
     }
@@ -62,7 +62,7 @@ abstract class Type
     /**
      * @return Type\BooleanType
      */
-    public static function boolean(): Type\BooleanType
+    public static function boolean()
     {
         return new Type\BooleanType();
     }
@@ -70,7 +70,7 @@ abstract class Type
     /**
      * @return Type\DoubleType
      */
-    public static function double(): Type\DoubleType
+    public static function double()
     {
         return new Type\DoubleType();
     }
@@ -78,7 +78,7 @@ abstract class Type
     /**
      * @return Type\FloatType
      */
-    public static function float(): Type\FloatType
+    public static function float()
     {
         return new Type\FloatType();
     }
@@ -86,7 +86,7 @@ abstract class Type
     /**
      * @return Type\IntType
      */
-    public static function int(): Type\IntType
+    public static function int()
     {
         return new Type\IntType();
     }
@@ -94,7 +94,7 @@ abstract class Type
     /**
      * @return Type\StringType
      */
-    public static function string(): Type\StringType
+    public static function string()
     {
         return new Type\StringType();
     }
@@ -104,7 +104,7 @@ abstract class Type
     /**
      * @return Type\DateTimeType
      */
-    public static function dateTime(): Type\DateTimeType
+    public static function dateTime()
     {
         return new Type\DateTimeType();
     }
@@ -112,7 +112,7 @@ abstract class Type
     /**
      * @return Type\LocalDateTimeType
      */
-    public static function localDateTime(): Type\LocalDateTimeType
+    public static function localDateTime()
     {
         return new Type\LocalDateTimeType();
     }
@@ -125,7 +125,7 @@ abstract class Type
      *
      * @return Type\EnumType
      */
-    public static function enum(Enumerated $enum, string $alias = null): Type\EnumType
+    public static function enum(Enumerated $enum, $alias = null)
     {
         return new Type\EnumType($enum, $alias);
     }
@@ -138,7 +138,7 @@ abstract class Type
      *
      * @return ObjectType
      */
-    public static function object($class, string $alias = null): Type\ObjectType
+    public static function object($class, $alias = null)
     {
         return new Type\ObjectType($class, $alias);
     }
@@ -150,7 +150,7 @@ abstract class Type
      *
      * @return Type\ListType
      */
-    public static function list_(TypeRef $valueType): Type\ListType
+    public static function list_(TypeRef $valueType)
     {
         return new Type\ListType($valueType);
     }
@@ -161,7 +161,7 @@ abstract class Type
      *
      * @return Type\MapType
      */
-    public static function map(TypeRef $keyTypeRef, TypeRef $valueTypeRef): Type\MapType
+    public static function map(TypeRef $keyTypeRef, TypeRef $valueTypeRef)
     {
         return new Type\MapType($keyTypeRef, $valueTypeRef);
     }
@@ -181,7 +181,10 @@ abstract class Type
      *
      * @return string
      */
-    abstract public static function type(): string;
+    public static function type()
+    {
+        throw new \LogicException(static::class . '::type() must be implemented!');
+    }
 
     /**
      * Get the id of the type.
@@ -192,7 +195,7 @@ abstract class Type
      *
      * @return string
      */
-    public function getId(): string
+    public function getId()
     {
         return $this->_;
     }
@@ -202,7 +205,7 @@ abstract class Type
      *
      * @return TypeRef
      */
-    public function ref(): TypeRef
+    public function ref()
     {
         return new TypeRef($this->getId());
     }

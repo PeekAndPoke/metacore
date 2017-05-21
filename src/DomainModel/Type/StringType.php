@@ -13,9 +13,9 @@ use PeekAndPoke\Component\MetaCore\DomainModel\Type;
  */
 class StringType extends Type
 {
-    public const TYPE = 'String';
+    const TYPE = 'String';
 
-    public static function type() : string
+    public static function type()
     {
         return self::TYPE;
     }

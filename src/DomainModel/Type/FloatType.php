@@ -13,9 +13,9 @@ use PeekAndPoke\Component\MetaCore\DomainModel\Type;
  */
 class FloatType extends Type
 {
-    public const TYPE = 'Float';
+    const TYPE = 'Float';
 
-    public static function type() : string
+    public static function type()
     {
         return self::TYPE;
     }

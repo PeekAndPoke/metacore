@@ -14,7 +14,7 @@ use PeekAndPoke\Component\MetaCore\DomainModel\TypeRef;
  */
 class MapType extends Type
 {
-    public const TYPE = 'Map';
+    const TYPE = 'Map';
 
     /** @var TypeRef */
     private $keyTypeRef;
@@ -35,7 +35,10 @@ class MapType extends Type
         $this->valueTypeRef = $valueTypeRef;
     }
 
-    public static function type() : string
+    /**
+     * @return string
+     */
+    public static function type()
     {
         return self::TYPE;
     }
@@ -43,7 +46,7 @@ class MapType extends Type
     /**
      * @return TypeRef
      */
-    public function getKeyTypeRef() : TypeRef
+    public function getKeyTypeRef()
     {
         return $this->keyTypeRef;
     }
@@ -51,7 +54,7 @@ class MapType extends Type
     /**
      * @return TypeRef
      */
-    public function getValueTypeRef() : TypeRef
+    public function getValueTypeRef()
     {
         return $this->valueTypeRef;
     }
@@ -59,7 +62,7 @@ class MapType extends Type
     /**
      * @return TypeRef
      */
-    public function ref() : TypeRef
+    public function ref()
     {
         return new TypeRef($this->getId(), [$this->keyTypeRef, $this->valueTypeRef]);
     }

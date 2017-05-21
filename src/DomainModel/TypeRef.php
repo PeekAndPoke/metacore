@@ -44,7 +44,7 @@ class TypeRef
     /**
      * @return string
      */
-    public function getId() : string
+    public function getId()
     {
         return $this->id;
     }
@@ -52,7 +52,7 @@ class TypeRef
     /**
      * @return int
      */
-    public function getNumParams() : int
+    public function getNumParams()
     {
         return count($this->params);
     }
@@ -60,13 +60,18 @@ class TypeRef
     /**
      * @return TypeRef[]
      */
-    public function getParams() : array
+    public function getParams()
     {
         return $this->params;
     }
 
-    public function getParamAt(int $idx) : TypeRef
+    /**
+     * @param int $idx
+     *
+     * @return TypeRef|null
+     */
+    public function getParamAt($idx)
     {
-        return $this->params[$idx];
+        return isset($this->params[$idx]) ? $this->params[$idx] : null;
     }
 }

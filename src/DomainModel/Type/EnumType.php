@@ -14,7 +14,7 @@ use PeekAndPoke\Types\Enumerated;
  */
 class EnumType extends Type
 {
-    public const TYPE = 'Enum';
+    const TYPE = 'Enum';
 
     /**
      * @var string
@@ -36,7 +36,7 @@ class EnumType extends Type
      * @param Enumerated  $enum  The enum class represented
      * @param null|string $alias The alias name
      */
-    public function __construct(Enumerated $enum, string $alias = null)
+    public function __construct(Enumerated $enum, $alias = null)
     {
         parent::__construct();
 
@@ -44,7 +44,10 @@ class EnumType extends Type
         $this->values = $enum::enumerateValues();
     }
 
-    public static function type(): string
+    /**
+     * @return string
+     */
+    public static function type()
     {
         return self::TYPE;
     }
@@ -52,7 +55,7 @@ class EnumType extends Type
     /**
      * @return string
      */
-    public function getId(): string
+    public function getId()
     {
         return $this->id;
     }
@@ -60,7 +63,7 @@ class EnumType extends Type
     /**
      * @return \string[]
      */
-    public function getValues(): array
+    public function getValues()
     {
         return $this->values;
     }

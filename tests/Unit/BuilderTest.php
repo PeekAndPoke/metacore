@@ -131,7 +131,7 @@ class BuilderTest extends TestCase
      *
      * @dataProvider provideTestBuildFullName
      */
-    public function testBuildFullName(Type $type, string $expectedFullName)
+    public function testBuildFullName(Type $type, $expectedFullName)
     {
         $builder = Builder::createDefault();
 

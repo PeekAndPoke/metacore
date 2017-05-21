@@ -50,7 +50,7 @@ class Property
      * @param bool       $nullable
      * @param Docs\Doc   $doc
      */
-    public function __construct(string $name, TypeRef $typeRef, Visibility $visibility, bool $nullable, Docs\Doc $doc)
+    public function __construct($name, TypeRef $typeRef, Visibility $visibility, $nullable, Docs\Doc $doc)
     {
         $this->name       = $name;
         $this->typeRef    = $typeRef;
@@ -62,7 +62,7 @@ class Property
     /**
      * @return string
      */
-    public function getName() : string
+    public function getName()
     {
         return $this->name;
     }
@@ -70,7 +70,7 @@ class Property
     /**
      * @return TypeRef
      */
-    public function getTypeRef() : TypeRef
+    public function getTypeRef()
     {
         return $this->typeRef;
     }
@@ -78,7 +78,7 @@ class Property
     /**
      * @return Visibility
      */
-    public function getVisibility() : Visibility
+    public function getVisibility()
     {
         return $this->visibility;
     }
@@ -86,7 +86,7 @@ class Property
     /**
      * @return bool
      */
-    public function isNullable() : bool
+    public function isNullable()
     {
         return $this->nullable;
     }
@@ -94,7 +94,7 @@ class Property
     /**
      * @return Docs\Doc
      */
-    public function getDoc() : Docs\Doc
+    public function getDoc()
     {
         return $this->doc;
     }

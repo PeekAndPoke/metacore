@@ -13,9 +13,9 @@ use PeekAndPoke\Component\MetaCore\DomainModel\Type;
  */
 class BooleanType extends Type
 {
-    public const TYPE = 'Boolean';
+    const TYPE = 'Boolean';
 
-    public static function type() : string
+    public static function type()
     {
         return self::TYPE;
     }

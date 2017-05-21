@@ -119,7 +119,7 @@ class Builder
     /**
      * @return Type[]
      */
-    public function getBuiltInTypes(): array
+    public function getBuiltInTypes()
     {
         return $this->builtInTypes;
     }
@@ -135,7 +135,7 @@ class Builder
      *
      * @return string
      */
-    public function buildFullName(TypeRef $ref): string
+    public function buildFullName(TypeRef $ref)
     {
         if (count($ref->getParams()) === 0) {
             return $ref->getId();
@@ -180,8 +180,8 @@ class Builder
 
         if ($ref->getId() === Type\MapType::type()) {
             $type = Type::map(
-                $ref->getParams()[0] ?? Type::any()->ref(),
-                $ref->getParams()[1] ?? Type::any()->ref()
+                $ref->getParamAt(0),
+                $ref->getParamAt(1)
             );
 
             $this->typeRegistry->add($fullName, $type);
@@ -190,7 +190,7 @@ class Builder
         }
 
         if ($ref->getId() === Type\ListType::type()) {
-            $type = Type::list_($ref->getParams()[0] ?? Type::any()->ref());
+            $type = Type::list_($ref->getParamAt(0));
 
             $this->typeRegistry->add($fullName, $type);
 

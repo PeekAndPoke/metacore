@@ -66,7 +66,7 @@ class DefaultPropertyMapper implements PropertyMapper
      *
      * @return TypeRef
      */
-    private function mapType(Builder $builder, \phpDocumentor\Reflection\Type $type) : TypeRef
+    private function mapType(Builder $builder, \phpDocumentor\Reflection\Type $type)
     {
         ////  MULTIPLE TYPE-HINTS  (COMPOUND)  //////////////////////////////////////////////////////////////////////
 

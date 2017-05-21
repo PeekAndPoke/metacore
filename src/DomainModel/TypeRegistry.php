@@ -53,7 +53,7 @@ class TypeRegistry
      */
     public function getById($id)
     {
-        return $this->types[$id] ?? null;
+        return isset($this->types[$id]) ? $this->types[$id] : null;
     }
 
     /**

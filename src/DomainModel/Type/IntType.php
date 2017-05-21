@@ -13,9 +13,9 @@ use PeekAndPoke\Component\MetaCore\DomainModel\Type;
  */
 class IntType extends Type
 {
-    public const TYPE = 'Int';
+    const TYPE = 'Int';
 
-    public static function type() : string
+    public static function type()
     {
         return self::TYPE;
     }

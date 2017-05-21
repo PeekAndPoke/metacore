@@ -13,9 +13,9 @@ use PeekAndPoke\Component\MetaCore\DomainModel\Type;
  */
 class DoubleType extends Type
 {
-    public const TYPE = 'Double';
+    const TYPE = 'Double';
 
-    public static function type() : string
+    public static function type()
     {
         return self::TYPE;
     }

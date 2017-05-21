@@ -13,7 +13,7 @@ use PeekAndPoke\Component\MetaCore\DomainModel\TypeRef;
  */
 class ListType extends Type
 {
-    public const TYPE = 'List';
+    const TYPE = 'List';
 
     /** @var TypeRef */
     private $valueTypeRef;
@@ -30,7 +30,7 @@ class ListType extends Type
         $this->valueTypeRef = $valueTypeRef;
     }
 
-    public static function type() : string
+    public static function type()
     {
         return self::TYPE;
     }
@@ -38,7 +38,7 @@ class ListType extends Type
     /**
      * @return TypeRef
      */
-    public function getValueTypeRef() : TypeRef
+    public function getValueTypeRef()
     {
         return $this->valueTypeRef;
     }
@@ -46,7 +46,7 @@ class ListType extends Type
     /**
      * @return TypeRef
      */
-    public function ref() : TypeRef
+    public function ref()
     {
         return new TypeRef($this->getId(), [$this->valueTypeRef]);
     }

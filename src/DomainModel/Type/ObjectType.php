@@ -15,7 +15,7 @@ use PeekAndPoke\Component\Slumber\Annotation\Slumber;
  */
 class ObjectType extends Type
 {
-    public const TYPE = 'Object';
+    const TYPE = 'Object';
 
     /**
      * The id of the type
@@ -59,7 +59,7 @@ class ObjectType extends Type
      *
      * @internal param string $id
      */
-    public function __construct($class, string $alias = null)
+    public function __construct($class, $alias = null)
     {
         parent::__construct();
 
@@ -67,7 +67,10 @@ class ObjectType extends Type
         $this->id = $alias ?: (is_object($class) ? get_class($class) : (string) $class);
     }
 
-    public static function type() : string
+    /**
+     * @return string
+     */
+    public static function type()
     {
         return self::TYPE;
     }
@@ -75,7 +78,7 @@ class ObjectType extends Type
     /**
      * @return string
      */
-    public function getId() : string
+    public function getId()
     {
         return $this->id;
     }

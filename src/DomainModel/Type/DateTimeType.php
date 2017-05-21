@@ -13,9 +13,9 @@ use PeekAndPoke\Component\MetaCore\DomainModel\Type;
  */
 class DateTimeType extends Type
 {
-    public const TYPE = 'DateTime';
+    const TYPE = 'DateTime';
 
-    public static function type() : string
+    public static function type()
     {
         return self::TYPE;
     }
