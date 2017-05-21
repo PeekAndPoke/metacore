@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "f3674712e8afa21cd265addc337c2fcc",
+    "content-hash": "ec708ab74b50f0c2723b8a6d9bcfb0b6",
     "packages": [
         {
             "name": "doctrine/annotations",
@@ -541,23 +541,25 @@
         },
         {
             "name": "peekandpoke/slumber",
-            "version": "v0.2.0",
+            "version": "0.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/PeekAndPoke/slumber.git",
-                "reference": "7b0ae956af4860bbd218c85aceee29fc340a965c"
+                "reference": "530ad3f77a63c6c0a163a8744d0b564a38a371d9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/PeekAndPoke/slumber/zipball/7b0ae956af4860bbd218c85aceee29fc340a965c",
-                "reference": "7b0ae956af4860bbd218c85aceee29fc340a965c",
+                "url": "https://api.github.com/repos/PeekAndPoke/slumber/zipball/530ad3f77a63c6c0a163a8744d0b564a38a371d9",
+                "reference": "530ad3f77a63c6c0a163a8744d0b564a38a371d9",
                 "shasum": ""
             },
             "require": {
                 "doctrine/common": "^2.7",
+                "ext-mongodb": "^1.2",
                 "mongodb/mongodb": "^1.1",
-                "peekandpoke/psi": "^0.4",
-                "php": "^7.1",
+                "peekandpoke/php-types": "^1.1.2",
+                "peekandpoke/psi": "^0.4.1",
+                "php": ">=5.6",
                 "psr/container": "^1.0",
                 "psr/log": "^1.0",
                 "roave/security-advisories": "dev-master",
@@ -565,7 +567,7 @@
                 "symfony/finder": "^3.2"
             },
             "require-dev": {
-                "phpunit/phpunit": "^6.1"
+                "phpunit/phpunit": "^4.8"
             },
             "type": "library",
             "autoload": {
@@ -584,7 +586,7 @@
                 }
             ],
             "description": "Serialization through Annotations",
-            "time": "2017-05-18T06:27:50+00:00"
+            "time": "2017-05-21T19:53:20+00:00"
         },
         {
             "name": "psr/container",

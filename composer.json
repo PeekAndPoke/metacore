@@ -15,7 +15,7 @@
         "roave/security-advisories": "dev-master",
         "doctrine/common": "^2.7",
         "peekandpoke/psi": "^0.4.1",
-        "peekandpoke/slumber": "^0.2",
+        "peekandpoke/slumber": "^0.3",
         "peekandpoke/php-types": "^1.1.1"
     },
     "require-dev": {
