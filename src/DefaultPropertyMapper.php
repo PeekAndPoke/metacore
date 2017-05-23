@@ -40,11 +40,7 @@ class DefaultPropertyMapper implements PropertyMapper
      */
     public function mapProperty(Builder $builder, \ReflectionProperty $property)
     {
-        // get the Class OR Trait that really defines the property -> this is needed for the DocBlock reader
-        $declaringClass  = Builder::getRealDeclaringClass($property);
-        $docBlockContext = (new Types\ContextFactory())->createFromReflector($declaringClass);
-
-        $docBlock = $this->docBlockFactory->create($property->getDocComment(), $docBlockContext);
+        $docBlock = $this->readDocBlock($property);
         $varTag   = $this->getVarTag($docBlock);
 
         return new Property(
@@ -59,6 +55,71 @@ class DefaultPropertyMapper implements PropertyMapper
         );
     }
 
+    /**
+     * @param \ReflectionProperty $property
+     *
+     * @return DocBlock
+     */
+    protected function readDocBlock(\ReflectionProperty $property)
+    {
+        // get the Class OR Trait that really defines the property -> this is needed for the DocBlock reader
+        $declaringClass  = Builder::getRealDeclaringClass($property);
+        $docBlockContext = (new Types\ContextFactory())->createFromReflector($declaringClass);
+
+        return $this->docBlockFactory->create($property->getDocComment(), $docBlockContext);
+    }
+
+    /**
+     * @param DocBlock $docBlock
+     *
+     * @return DocBlock\Tags\Var_
+     */
+    protected function getVarTag(DocBlock $docBlock)
+    {
+        $varTags = $docBlock->getTagsByName('var');
+
+        if (count($varTags) === 0) {
+            throw MetaCoreRuntimeException::noVarTagFound();
+        }
+
+        return $varTags[0];
+    }
+
+
+    /**
+     * @param \phpDocumentor\Reflection\Type $type
+     *
+     * @return bool
+     */
+    protected function isNullable(\phpDocumentor\Reflection\Type $type)
+    {
+        if ($type instanceof Types\Null_) {
+            return true;
+        }
+
+        if ($type instanceof Types\Compound) {
+
+            return Psi::it($this->getCompoundChildren($type))
+                       ->filter(new IsInstanceOf(Types\Null_::class))
+                       ->count() > 0;
+        }
+
+        return false;
+    }
+
+    /**
+     * @param Types\Compound $compound
+     *
+     * @return \phpDocumentor\Reflection\Type[]
+     */
+    protected function getCompoundChildren(Types\Compound $compound)
+    {
+        $reflect = new \ReflectionClass(Types\Compound::class);
+        $prop    = $reflect->getProperty('types');
+        $prop->setAccessible(true);
+
+        return $prop->getValue($compound);
+    }
 
     /**
      * @param Builder                        $builder
@@ -143,57 +204,5 @@ class DefaultPropertyMapper implements PropertyMapper
         // we default to this one:
 
         return Type::any()->ref();
-    }
-
-    /**
-     * @param DocBlock $docBlock
-     *
-     * @return DocBlock\Tags\Var_
-     */
-    protected function getVarTag(DocBlock $docBlock)
-    {
-        $varTags = $docBlock->getTagsByName('var');
-
-        if (count($varTags) === 0) {
-            throw MetaCoreRuntimeException::noVarTagFound();
-        }
-
-        return $varTags[0];
-    }
-
-
-    /**
-     * @param \phpDocumentor\Reflection\Type $type
-     *
-     * @return bool
-     */
-    protected function isNullable(\phpDocumentor\Reflection\Type $type)
-    {
-        if ($type instanceof Types\Null_) {
-            return true;
-        }
-
-        if ($type instanceof Types\Compound) {
-
-            return Psi::it($this->getCompoundChildren($type))
-                       ->filter(new IsInstanceOf(Types\Null_::class))
-                       ->count() > 0;
-        }
-
-        return false;
-    }
-
-    /**
-     * @param Types\Compound $compound
-     *
-     * @return \phpDocumentor\Reflection\Type[]
-     */
-    protected function getCompoundChildren(Types\Compound $compound)
-    {
-        $reflect = new \ReflectionClass(Types\Compound::class);
-        $prop    = $reflect->getProperty('types');
-        $prop->setAccessible(true);
-
-        return $prop->getValue($compound);
     }
 }
