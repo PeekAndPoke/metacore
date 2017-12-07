@@ -54,9 +54,9 @@ class BuilderTest extends TestCase
      *
      * @param Type $input
      *
-     * @dataProvider provideTestBuildForRefOmnipotency
+     * @dataProvider provideTestBuildForRefIdempotency
      */
-    public function testBuildForRefOmnipotency(Type $input)
+    public function testBuildForRefIdempotency(Type $input)
     {
         $builder = Builder::createDefault();
         $ref     = $input->ref();
@@ -72,7 +72,7 @@ class BuilderTest extends TestCase
     /**
      * @return array
      */
-    public static function provideTestBuildForRefOmnipotency()
+    public static function provideTestBuildForRefIdempotency()
     {
         return [
             [

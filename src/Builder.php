@@ -350,7 +350,7 @@ class Builder
     {
         $declaringTrait = Psi::it($class->getTraits())
             ->filter(function (\ReflectionClass $r) use ($prop) { return $r->hasProperty($prop->getName()); })
-            ->getFirst(null);
+            ->getFirst();
 
         // We found it on the traits. No we need to recurse on traits to find exactly the one that was defining it
         if ($declaringTrait !== null) {

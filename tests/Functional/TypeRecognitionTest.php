@@ -196,6 +196,8 @@ class TypeRecognitionTest extends TestCase
     {
         $def = static::$type->getPropertyByName('anArray');
 
+        $this->assertNotNull($def);
+
         /** @var MetaCore\Type\MapType $type */
         $type = static::$builder->buildForRef($def->getTypeRef());
 
@@ -221,6 +223,8 @@ class TypeRecognitionTest extends TestCase
     public function testAnArrayOfInts()
     {
         $def = static::$type->getPropertyByName('anArrayOfInts');
+
+        $this->assertNotNull($def);
 
         /** @var MetaCore\Type\MapType $type */
         $type = static::$builder->buildForRef($def->getTypeRef());
@@ -248,6 +252,8 @@ class TypeRecognitionTest extends TestCase
     {
         $def = static::$type->getPropertyByName('anArrayOfStrings');
 
+        $this->assertNotNull($def);
+
         /** @var MetaCore\Type\MapType $type */
         $type = static::$builder->buildForRef($def->getTypeRef());
 
@@ -273,6 +279,8 @@ class TypeRecognitionTest extends TestCase
     public function testAnArrayOfArraysOfFloats()
     {
         $def = static::$type->getPropertyByName('anArrayOfArraysOfFloats');
+
+        $this->assertNotNull($def);
 
         /** @var MetaCore\Type\MapType $type */
         $type = static::$builder->buildForRef($def->getTypeRef());

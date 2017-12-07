@@ -60,7 +60,7 @@ class MetaCoreRuntimeException extends \RuntimeException
     {
         $root = $this;
 
-        while ($root->getPrevious() && $root->getPrevious() instanceof MetaCoreRuntimeException) {
+        while ($root->getPrevious() && $root->getPrevious() instanceof self) {
             $root = $root->getPrevious();
         }
 

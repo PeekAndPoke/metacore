@@ -32,14 +32,14 @@ class Visibility extends Enumerated
     public static function fromReflection(\ReflectionProperty $property)
     {
         if ($property->isPublic()) {
-            return Visibility::$PUBLIC;
+            return self::$PUBLIC;
         }
 
         if ($property->isProtected()) {
-            return Visibility::$PROTECTED;
+            return self::$PROTECTED;
         }
 
-        return Visibility::$PRIVATE;
+        return self::$PRIVATE;
     }
 }
 

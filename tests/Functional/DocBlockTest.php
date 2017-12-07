@@ -39,6 +39,8 @@ class DocBlockTest extends TestCase
     {
         $def = $this->type->getPropertyByName($propertyName);
 
+        $this->assertNotNull($def);
+
         static::assertEquals(
             'This is ' . $propertyName,
             $def->getDoc()->getSummary(),
