@@ -153,7 +153,7 @@ class DefaultPropertyMapper implements PropertyMapper
         if ($type instanceof Types\Float_) {
             return Type::float()->ref();
         }
-        if ($type instanceof Types\Mixed) {
+        if ($type instanceof Types\Mixed_) {
             return Type::any()->ref();
         }
         if ($type instanceof Types\Integer) {
