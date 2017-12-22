@@ -6,7 +6,6 @@
 namespace PeekAndPoke\Component\MetaCore\Unit;
 
 use Doctrine\Common\Annotations\AnnotationReader;
-use Doctrine\Common\Annotations\AnnotationRegistry;
 use PeekAndPoke\Component\MetaCore\Builder;
 use PeekAndPoke\Component\MetaCore\DomainModel as MetaCore;
 use PeekAndPoke\Component\MetaCore\DomainModel\Type;
@@ -25,10 +24,6 @@ class BuilderTest extends TestCase
 
     public function testConstruction()
     {
-        AnnotationRegistry::registerLoader(function ($class) {
-            return class_exists($class) || interface_exists($class) || trait_exists($class);
-        });
-
         $reader = new AnnotationReader();
         /** @var PropertyFilter $filter */
         $filter = $this->getMockBuilder(PropertyFilter::class)->getMockForAbstractClass();

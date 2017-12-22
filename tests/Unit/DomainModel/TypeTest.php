@@ -26,9 +26,7 @@ class TypeTest extends TestCase
 
     public static function setUpBeforeClass()
     {
-        AnnotationRegistry::registerLoader(function ($class) {
-            return class_exists($class) || interface_exists($class) || trait_exists($class);
-        });
+        AnnotationRegistry::registerLoader('class_exists');
 
         $reader = new AnnotationReader();
 

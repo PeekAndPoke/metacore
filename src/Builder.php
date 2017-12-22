@@ -45,19 +45,6 @@ class Builder
      */
     public static function createDefault()
     {
-        static $autoloaderRegistered = false;
-
-        if (!$autoloaderRegistered) {
-            $autoloaderRegistered = true;
-
-            /** @noinspection ExceptionsAnnotatingAndHandlingInspection */
-            AnnotationRegistry::registerLoader(
-                function ($class) {
-                    return class_exists($class) || interface_exists($class) || trait_exists($class);
-                }
-            );
-        }
-
         return new static(
             new CachedReader(new AnnotationReader(), new ArrayCache()),
             new DefaultPropertyFilter(),
@@ -74,6 +61,14 @@ class Builder
      */
     public function __construct(Reader $reader, PropertyFilter $propertyFilter, PropertyMapper $propertyMapper)
     {
+        static $autoload = false;
+
+        if (! $autoload) {
+            $autoload = true;
+            /** @noinspection ExceptionsAnnotatingAndHandlingInspection */
+            AnnotationRegistry::registerLoader('class_exists');
+        }
+
         $this->reader         = $reader;
         $this->propertyFilter = $propertyFilter;
         $this->propertyMapper = $propertyMapper;

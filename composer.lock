@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "1eb1f40b64114d98e6857bd155aee5c0",
+    "content-hash": "9554c8c4ead4e8638de1c69f52746b0b",
     "packages": [
         {
             "name": "doctrine/annotations",
@@ -550,16 +550,16 @@
         },
         {
             "name": "peekandpoke/slumber",
-            "version": "v0.5.3",
+            "version": "v0.6.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/PeekAndPoke/slumber.git",
-                "reference": "67bed95d1d8e663c898679fadaf4ac5deba16e27"
+                "reference": "ebac126b80f30042d1d5d39c21b62a8ffd704bc6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/PeekAndPoke/slumber/zipball/67bed95d1d8e663c898679fadaf4ac5deba16e27",
-                "reference": "67bed95d1d8e663c898679fadaf4ac5deba16e27",
+                "url": "https://api.github.com/repos/PeekAndPoke/slumber/zipball/ebac126b80f30042d1d5d39c21b62a8ffd704bc6",
+                "reference": "ebac126b80f30042d1d5d39c21b62a8ffd704bc6",
                 "shasum": ""
             },
             "require": {
@@ -595,7 +595,7 @@
                 }
             ],
             "description": "Serialization through Annotations",
-            "time": "2017-12-18T14:46:20+00:00"
+            "time": "2017-12-22T19:27:05+00:00"
         },
         {
             "name": "psr/container",
