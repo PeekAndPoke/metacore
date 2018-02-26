@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "9554c8c4ead4e8638de1c69f52746b0b",
+  "content-hash": "7e471344280515aaae05585c74e1498c",
     "packages": [
         {
             "name": "doctrine/annotations",
@@ -410,77 +410,17 @@
             "time": "2014-09-09T13:34:57+00:00"
         },
         {
-            "name": "mongodb/mongodb",
-            "version": "1.2.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/mongodb/mongo-php-library.git",
-                "reference": "5cffeb33b893b6bb04195b99ddc3955a29252339"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/mongodb/mongo-php-library/zipball/5cffeb33b893b6bb04195b99ddc3955a29252339",
-                "reference": "5cffeb33b893b6bb04195b99ddc3955a29252339",
-                "shasum": ""
-            },
-            "require": {
-                "ext-hash": "*",
-                "ext-json": "*",
-                "ext-mongodb": "^1.3.0",
-                "php": ">=5.5"
-            },
-            "require-dev": {
-                "phpunit/phpunit": "^4.8"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "MongoDB\\": "src/"
-                },
-                "files": [
-                    "src/functions.php"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "Apache-2.0"
-            ],
-            "authors": [
-                {
-                    "name": "Jeremy Mikola",
-                    "email": "jmikola@gmail.com"
-                },
-                {
-                    "name": "Hannes Magnusson",
-                    "email": "bjori@mongodb.com"
-                },
-                {
-                    "name": "Derick Rethans",
-                    "email": "github@derickrethans.nl"
-                }
-            ],
-            "description": "MongoDB driver library",
-            "homepage": "https://jira.mongodb.org/browse/PHPLIB",
-            "keywords": [
-                "database",
-                "driver",
-                "mongodb",
-                "persistence"
-            ],
-            "time": "2017-10-27T19:42:57+00:00"
-        },
-        {
             "name": "peekandpoke/php-types",
-            "version": "v1.1.5",
+          "version": "v1.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/PeekAndPoke/php-types.git",
-                "reference": "f4e081af271cb5f841700ac800a3e180d5738832"
+              "reference": "59673d02a0e87c2e201ea7bff6d5a741b8717dd3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/PeekAndPoke/php-types/zipball/f4e081af271cb5f841700ac800a3e180d5738832",
-                "reference": "f4e081af271cb5f841700ac800a3e180d5738832",
+              "url": "https://api.github.com/repos/PeekAndPoke/php-types/zipball/59673d02a0e87c2e201ea7bff6d5a741b8717dd3",
+              "reference": "59673d02a0e87c2e201ea7bff6d5a741b8717dd3",
                 "shasum": ""
             },
             "require-dev": {
@@ -503,7 +443,7 @@
                 }
             ],
             "description": "Basic types for PHP like Enums, LocalDate etc...",
-            "time": "2017-12-06T10:03:26+00:00"
+          "time": "2018-02-12T08:14:21+00:00"
         },
         {
             "name": "peekandpoke/psi",
@@ -550,32 +490,29 @@
         },
         {
             "name": "peekandpoke/slumber",
-            "version": "v0.6.0",
+          "version": "v1.1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/PeekAndPoke/slumber.git",
-                "reference": "ebac126b80f30042d1d5d39c21b62a8ffd704bc6"
+              "reference": "d5b4f221e7c9dad08a4a4a962d6981701b292960"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/PeekAndPoke/slumber/zipball/ebac126b80f30042d1d5d39c21b62a8ffd704bc6",
-                "reference": "ebac126b80f30042d1d5d39c21b62a8ffd704bc6",
+              "url": "https://api.github.com/repos/PeekAndPoke/slumber/zipball/d5b4f221e7c9dad08a4a4a962d6981701b292960",
+              "reference": "d5b4f221e7c9dad08a4a4a962d6981701b292960",
                 "shasum": ""
             },
             "require": {
-                "doctrine/cache": "^1.7.1",
                 "doctrine/common": "^2.8.1",
-                "ext-mongodb": "^1.3",
-                "mongodb/mongodb": "^1.2.0",
+              "peekandpoke/php-types": "~1.2.0",
                 "peekandpoke/psi": "^1.0.1",
                 "php": ">=7.1",
                 "psr/container": "^1.0",
                 "psr/log": "^1.0.2",
-                "symfony/console": "^3.3.10",
                 "symfony/finder": "^3.3.10"
             },
             "require-dev": {
-                "phpunit/phpunit": "^6.1.0",
+              "phpunit/phpunit": "^7.0.1",
                 "roave/security-advisories": "dev-master"
             },
             "type": "library",
@@ -595,7 +532,7 @@
                 }
             ],
             "description": "Serialization through Annotations",
-            "time": "2017-12-22T19:27:05+00:00"
+          "time": "2018-02-26T12:57:55+00:00"
         },
         {
             "name": "psr/container",
@@ -692,131 +629,6 @@
                 "psr-3"
             ],
             "time": "2016-10-10T12:19:37+00:00"
-        },
-        {
-            "name": "symfony/console",
-            "version": "v3.4.2",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/symfony/console.git",
-                "reference": "9f21adfb92a9315b73ae2ed43138988ee4913d4e"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/symfony/console/zipball/9f21adfb92a9315b73ae2ed43138988ee4913d4e",
-                "reference": "9f21adfb92a9315b73ae2ed43138988ee4913d4e",
-                "shasum": ""
-            },
-            "require": {
-                "php": "^5.5.9|>=7.0.8",
-                "symfony/debug": "~2.8|~3.0|~4.0",
-                "symfony/polyfill-mbstring": "~1.0"
-            },
-            "conflict": {
-                "symfony/dependency-injection": "<3.4",
-                "symfony/process": "<3.3"
-            },
-            "require-dev": {
-                "psr/log": "~1.0",
-                "symfony/config": "~3.3|~4.0",
-                "symfony/dependency-injection": "~3.4|~4.0",
-                "symfony/event-dispatcher": "~2.8|~3.0|~4.0",
-                "symfony/lock": "~3.4|~4.0",
-                "symfony/process": "~3.3|~4.0"
-            },
-            "suggest": {
-                "psr/log": "For using the console logger",
-                "symfony/event-dispatcher": "",
-                "symfony/lock": "",
-                "symfony/process": ""
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "3.4-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Symfony\\Component\\Console\\": ""
-                },
-                "exclude-from-classmap": [
-                    "/Tests/"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Fabien Potencier",
-                    "email": "fabien@symfony.com"
-                },
-                {
-                    "name": "Symfony Community",
-                    "homepage": "https://symfony.com/contributors"
-                }
-            ],
-            "description": "Symfony Console Component",
-            "homepage": "https://symfony.com",
-            "time": "2017-12-14T19:40:10+00:00"
-        },
-        {
-            "name": "symfony/debug",
-            "version": "v4.0.2",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/symfony/debug.git",
-                "reference": "8c3e709209ce3b952a31c0f4a31ac7703c3d0226"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/symfony/debug/zipball/8c3e709209ce3b952a31c0f4a31ac7703c3d0226",
-                "reference": "8c3e709209ce3b952a31c0f4a31ac7703c3d0226",
-                "shasum": ""
-            },
-            "require": {
-                "php": "^7.1.3",
-                "psr/log": "~1.0"
-            },
-            "conflict": {
-                "symfony/http-kernel": "<3.4"
-            },
-            "require-dev": {
-                "symfony/http-kernel": "~3.4|~4.0"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "4.0-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Symfony\\Component\\Debug\\": ""
-                },
-                "exclude-from-classmap": [
-                    "/Tests/"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Fabien Potencier",
-                    "email": "fabien@symfony.com"
-                },
-                {
-                    "name": "Symfony Community",
-                    "homepage": "https://symfony.com/contributors"
-                }
-            ],
-            "description": "Symfony Debug Component",
-            "homepage": "https://symfony.com",
-            "time": "2017-12-12T08:41:51+00:00"
         },
         {
             "name": "symfony/finder",
@@ -983,6 +795,66 @@
             "time": "2017-07-22T11:58:36+00:00"
         },
         {
+          "name": "mongodb/mongodb",
+          "version": "1.2.0",
+          "source": {
+            "type": "git",
+            "url": "https://github.com/mongodb/mongo-php-library.git",
+            "reference": "5cffeb33b893b6bb04195b99ddc3955a29252339"
+          },
+          "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/mongodb/mongo-php-library/zipball/5cffeb33b893b6bb04195b99ddc3955a29252339",
+            "reference": "5cffeb33b893b6bb04195b99ddc3955a29252339",
+            "shasum": ""
+          },
+          "require": {
+            "ext-hash": "*",
+            "ext-json": "*",
+            "ext-mongodb": "^1.3.0",
+            "php": ">=5.5"
+          },
+          "require-dev": {
+            "phpunit/phpunit": "^4.8"
+          },
+          "type": "library",
+          "autoload": {
+            "psr-4": {
+              "MongoDB\\": "src/"
+            },
+            "files": [
+              "src/functions.php"
+            ]
+          },
+          "notification-url": "https://packagist.org/downloads/",
+          "license": [
+            "Apache-2.0"
+          ],
+          "authors": [
+            {
+              "name": "Jeremy Mikola",
+              "email": "jmikola@gmail.com"
+            },
+            {
+              "name": "Hannes Magnusson",
+              "email": "bjori@mongodb.com"
+            },
+            {
+              "name": "Derick Rethans",
+              "email": "github@derickrethans.nl"
+            }
+          ],
+          "description": "MongoDB driver library",
+          "homepage": "https://jira.mongodb.org/browse/PHPLIB",
+          "keywords": [
+            "database",
+            "driver",
+            "mongodb",
+            "persistence"
+          ],
+          "time": "2017-10-27T19:42:57+00:00"
+        },
+      {
             "name": "myclabs/deep-copy",
             "version": "1.7.0",
             "source": {
@@ -2441,6 +2313,131 @@
             "time": "2016-10-03T07:35:21+00:00"
         },
         {
+          "name": "symfony/console",
+          "version": "v3.4.2",
+          "source": {
+            "type": "git",
+            "url": "https://github.com/symfony/console.git",
+            "reference": "9f21adfb92a9315b73ae2ed43138988ee4913d4e"
+          },
+          "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/symfony/console/zipball/9f21adfb92a9315b73ae2ed43138988ee4913d4e",
+            "reference": "9f21adfb92a9315b73ae2ed43138988ee4913d4e",
+            "shasum": ""
+          },
+          "require": {
+            "php": "^5.5.9|>=7.0.8",
+            "symfony/debug": "~2.8|~3.0|~4.0",
+            "symfony/polyfill-mbstring": "~1.0"
+          },
+          "conflict": {
+            "symfony/dependency-injection": "<3.4",
+            "symfony/process": "<3.3"
+          },
+          "require-dev": {
+            "psr/log": "~1.0",
+            "symfony/config": "~3.3|~4.0",
+            "symfony/dependency-injection": "~3.4|~4.0",
+            "symfony/event-dispatcher": "~2.8|~3.0|~4.0",
+            "symfony/lock": "~3.4|~4.0",
+            "symfony/process": "~3.3|~4.0"
+          },
+          "suggest": {
+            "psr/log": "For using the console logger",
+            "symfony/event-dispatcher": "",
+            "symfony/lock": "",
+            "symfony/process": ""
+          },
+          "type": "library",
+          "extra": {
+            "branch-alias": {
+              "dev-master": "3.4-dev"
+            }
+          },
+          "autoload": {
+            "psr-4": {
+              "Symfony\\Component\\Console\\": ""
+            },
+            "exclude-from-classmap": [
+              "/Tests/"
+            ]
+          },
+          "notification-url": "https://packagist.org/downloads/",
+          "license": [
+            "MIT"
+          ],
+          "authors": [
+            {
+              "name": "Fabien Potencier",
+              "email": "fabien@symfony.com"
+            },
+            {
+              "name": "Symfony Community",
+              "homepage": "https://symfony.com/contributors"
+            }
+          ],
+          "description": "Symfony Console Component",
+          "homepage": "https://symfony.com",
+          "time": "2017-12-14T19:40:10+00:00"
+        },
+      {
+        "name": "symfony/debug",
+        "version": "v4.0.2",
+        "source": {
+          "type": "git",
+          "url": "https://github.com/symfony/debug.git",
+          "reference": "8c3e709209ce3b952a31c0f4a31ac7703c3d0226"
+        },
+        "dist": {
+          "type": "zip",
+          "url": "https://api.github.com/repos/symfony/debug/zipball/8c3e709209ce3b952a31c0f4a31ac7703c3d0226",
+          "reference": "8c3e709209ce3b952a31c0f4a31ac7703c3d0226",
+          "shasum": ""
+        },
+        "require": {
+          "php": "^7.1.3",
+          "psr/log": "~1.0"
+        },
+        "conflict": {
+          "symfony/http-kernel": "<3.4"
+        },
+        "require-dev": {
+          "symfony/http-kernel": "~3.4|~4.0"
+        },
+        "type": "library",
+        "extra": {
+          "branch-alias": {
+            "dev-master": "4.0-dev"
+          }
+        },
+        "autoload": {
+          "psr-4": {
+            "Symfony\\Component\\Debug\\": ""
+          },
+          "exclude-from-classmap": [
+            "/Tests/"
+          ]
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+          "MIT"
+        ],
+        "authors": [
+          {
+            "name": "Fabien Potencier",
+            "email": "fabien@symfony.com"
+          },
+          {
+            "name": "Symfony Community",
+            "homepage": "https://symfony.com/contributors"
+          }
+        ],
+        "description": "Symfony Debug Component",
+        "homepage": "https://symfony.com",
+        "time": "2017-12-12T08:41:51+00:00"
+      },
+      {
             "name": "theseer/tokenizer",
             "version": "1.1.0",
             "source": {
